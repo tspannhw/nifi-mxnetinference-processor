@@ -2,7 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e2e223d-dea0-427d-a42c-c5910de29136" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/SSDClassifierService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/java/com/dataflowdeveloper/mxnet/InferenceProcessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/DEPENDENCIES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/bcpkix-jdk15on-1.60.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/bcprov-jdk15on-1.60.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/commons-codec-1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/commons-io-2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/commons-lang3-3.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/jBCrypt-0.4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/jackson-annotations-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/jackson-core-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/jackson-databind-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/mxnet-full_2.11-osx-x86_64-cpu-1.3.1-20181120.200740-24.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/nifi-mxnetinference-processors-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/nifi-processor-utils-1.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/nifi-security-utils-1.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/classes/META-INF/bundled-dependencies/nifi-utils-1.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/nifi-mxnetinference-nar-1.0.nar" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/nifi-mxnetinference-nar-1.0.nar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/test-classes/META-INF/DEPENDENCIES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/test-classes/META-INF/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/test-classes/META-INF/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/META-INF/DEPENDENCIES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/META-INF/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/META-INF/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/com/dataflowdeveloper/mxnet/InferenceProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/com/dataflowdeveloper/mxnet/InferenceProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/nifi-mxnetinference-processors-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/nifi-mxnetinference-processors-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/test-classes/META-INF/DEPENDENCIES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/test-classes/META-INF/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/test-classes/META-INF/NOTICE" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,14 +51,105 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="136" column="55" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/java/com/dataflowdeveloper/mxnet/InferenceProcessorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="60" column="160" selection-start-line="60" selection-start-column="160" selection-end-line="60" selection-end-column="160" />
+              <folding>
+                <element signature="e#588#589#0" expanded="true" />
+                <element signature="e#669#670#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/SSDClassifierService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1143">
+              <caret line="76" column="38" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="136" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2764#2784#0" expanded="true" />
+                <element signature="e#6857#6865#0" expanded="true" />
+                <element signature="e#6742#6751#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/Result.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#566#567#0" expanded="true" />
+                <element signature="e#588#589#0" expanded="true" />
+                <element signature="e#1743#1744#0" expanded="true" />
+                <element signature="e#1828#1829#0" expanded="true" />
+                <element signature="e#1118#1119#0" expanded="true" />
+                <element signature="e#1146#1147#0" expanded="true" />
+                <element signature="e#1188#1189#0" expanded="true" />
+                <element signature="e#1222#1223#0" expanded="true" />
+                <element signature="e#1259#1260#0" expanded="true" />
+                <element signature="e#1293#1294#0" expanded="true" />
+                <element signature="e#1346#1347#0" expanded="true" />
+                <element signature="e#1392#1393#0" expanded="true" />
+                <element signature="e#1420#1421#0" expanded="true" />
+                <element signature="e#1447#1448#0" expanded="true" />
+                <element signature="e#1484#1485#0" expanded="true" />
+                <element signature="e#1516#1517#0" expanded="true" />
+                <element signature="e#1546#1547#0" expanded="true" />
+                <element signature="e#1573#1574#0" expanded="true" />
+                <element signature="e#1612#1613#0" expanded="true" />
+                <element signature="e#1644#1645#0" expanded="true" />
+                <element signature="e#1674#1675#0" expanded="true" />
+                <element signature="e#1701#1702#0" expanded="true" />
+                <element signature="e#1740#1741#0" expanded="true" />
+                <element signature="e#1772#1773#0" expanded="true" />
+                <element signature="e#1802#1803#0" expanded="true" />
+                <element signature="e#1829#1830#0" expanded="true" />
+                <element signature="e#1868#1869#0" expanded="true" />
+                <element signature="e#1900#1901#0" expanded="true" />
+                <element signature="e#1930#1931#0" expanded="true" />
+                <element signature="e#1957#1958#0" expanded="true" />
+                <element signature="e#1996#1997#0" expanded="true" />
+                <element signature="e#2028#2029#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>checkExist</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,6 +158,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/SSDClassifier.java" />
+        <option value="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/Result.java" />
+        <option value="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/SSDClassifierService.java" />
+        <option value="$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/java/com/dataflowdeveloper/mxnet/InferenceProcessorTest.java" />
         <option value="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java" />
       </list>
     </option>
@@ -70,6 +201,77 @@
               <item name="nifi-mxnetinference-processor" type="462c0819:PsiDirectoryNode" />
               <item name="nifi-mxnetinference-processors" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="nifi-mxnetinference-processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nifi-mxnetinference-processor" type="462c0819:PsiDirectoryNode" />
+              <item name="nifi-mxnetinference-processors" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nifi-mxnetinference-processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nifi-mxnetinference-processor" type="462c0819:PsiDirectoryNode" />
+              <item name="nifi-mxnetinference-processors" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nifi-mxnetinference-processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nifi-mxnetinference-processor" type="462c0819:PsiDirectoryNode" />
+              <item name="nifi-mxnetinference-processors" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nifi-mxnetinference-processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nifi-mxnetinference-processor" type="462c0819:PsiDirectoryNode" />
+              <item name="nifi-mxnetinference-processors" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mxnet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nifi-mxnetinference-processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nifi-mxnetinference-processor" type="462c0819:PsiDirectoryNode" />
+              <item name="nifi-mxnetinference-processors" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nifi-mxnetinference-processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nifi-mxnetinference-processor" type="462c0819:PsiDirectoryNode" />
+              <item name="nifi-mxnetinference-processors" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nifi-mxnetinference-processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nifi-mxnetinference-processor" type="462c0819:PsiDirectoryNode" />
+              <item name="nifi-mxnetinference-processors" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mxnet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nifi-mxnetinference-processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nifi-mxnetinference-processor" type="462c0819:PsiDirectoryNode" />
+              <item name="nifi-mxnetinference-processors" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nifi-mxnetinference-processor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nifi-mxnetinference-processor" type="462c0819:PsiDirectoryNode" />
+              <item name="nifi-mxnetinference-processors" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="resnet50_ssd" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -79,8 +281,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543613762897" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543694917245" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.dataflowdeveloper.mxnet" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -94,15 +306,61 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.InferenceProcessorTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SSDClassifierService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dataflowdeveloper.mxnet.SSDClassifierService" />
+      <module name="nifi-mxnetinference-processors" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dataflowdeveloper.mxnet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InferenceProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nifi-mxnetinference-processors" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dataflowdeveloper.mxnet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dataflowdeveloper.mxnet" />
+      <option name="MAIN_CLASS_NAME" value="com.dataflowdeveloper.mxnet.InferenceProcessorTest" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InferenceProcessorTest.testProcessor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nifi-mxnetinference-processors" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dataflowdeveloper.mxnet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dataflowdeveloper.mxnet" />
+      <option name="MAIN_CLASS_NAME" value="com.dataflowdeveloper.mxnet.InferenceProcessorTest" />
+      <option name="METHOD_NAME" value="testProcessor" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,6 +388,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InferenceProcessorTest" />
+        <item itemvalue="JUnit.InferenceProcessorTest.testProcessor" />
+        <item itemvalue="Application.SSDClassifierService" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -144,10 +409,34 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="InferenceProcessorTest - 2018.12.01 at 14h 15m 08s.xml">
+      <configuration name="InferenceProcessorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InferenceProcessorTest - 2018.12.01 at 14h 28m 52s.xml">
+      <configuration name="InferenceProcessorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InferenceProcessorTest - 2018.12.01 at 14h 31m 16s.xml">
+      <configuration name="InferenceProcessorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InferenceProcessorTest - 2018.12.01 at 14h 31m 57s.xml">
+      <configuration name="InferenceProcessorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InferenceProcessorTest_testProcessor - 2018.12.01 at 14h 34m 47s.xml">
+      <configuration name="InferenceProcessorTest.testProcessor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InferenceProcessorTest_testProcessor - 2018.12.01 at 14h 35m 22s.xml">
+      <configuration name="InferenceProcessorTest.testProcessor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InferenceProcessorTest_testProcessor - 2018.12.01 at 14h 36m 40s.xml">
+      <configuration name="InferenceProcessorTest.testProcessor" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="810" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -156,7 +445,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286908" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.7172702" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -164,7 +453,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286908" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32729805" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -178,27 +467,91 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dataflowdeveloper/mxnet/App.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/dataflowdeveloper/mxnet/AppTest.java" />
-    <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="150" column="61" selection-start-line="150" selection-start-column="61" selection-end-line="150" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2889#2909#0" expanded="true" />
-            <element signature="e#3079#3093#0" expanded="true" />
-            <element signature="e#3433#3434#0" expanded="true" />
-            <element signature="e#3474#3475#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3601#3602#0" expanded="true" />
-            <element signature="e#4581#4597#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1307" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#1743#1744#0" expanded="true" />
+            <element signature="e#1828#1829#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#1188#1189#0" expanded="true" />
+            <element signature="e#1222#1223#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1420#1421#0" expanded="true" />
+            <element signature="e#1447#1448#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1516#1517#0" expanded="true" />
+            <element signature="e#1546#1547#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+            <element signature="e#1674#1675#0" expanded="true" />
+            <element signature="e#1701#1702#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+            <element signature="e#1772#1773#0" expanded="true" />
+            <element signature="e#1802#1803#0" expanded="true" />
+            <element signature="e#1829#1830#0" expanded="true" />
+            <element signature="e#1868#1869#0" expanded="true" />
+            <element signature="e#1900#1901#0" expanded="true" />
+            <element signature="e#1930#1931#0" expanded="true" />
+            <element signature="e#1957#1958#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
+            <element signature="e#2028#2029#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/java/com/dataflowdeveloper/mxnet/InferenceProcessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="60" column="160" selection-start-line="60" selection-start-column="160" selection-end-line="60" selection-end-column="160" />
+          <folding>
+            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/SSDClassifierService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1143">
+          <caret line="76" column="38" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="136" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2764#2784#0" expanded="true" />
+            <element signature="e#6857#6865#0" expanded="true" />
+            <element signature="e#6742#6751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="136" column="55" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

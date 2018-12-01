@@ -52,7 +52,7 @@ public class InferenceProcessor extends AbstractProcessor {
     public static final String PROPERTY_NAME_EXTRA = "Extra Resources";
 
     public static final PropertyDescriptor MODEL_DIR = new PropertyDescriptor.Builder().name(MODEL_DIR_NAME)
-            .description("Model Directory").required(true).expressionLanguageSupported(true)
+            .description("Model Directory").required(true)
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR).build();
 
     public static final Relationship REL_SUCCESS = new Relationship.Builder().name("success")
@@ -64,7 +64,7 @@ public class InferenceProcessor extends AbstractProcessor {
 
     private Set<Relationship> relationships;
 
-    // private TensorFlowService service;
+    private SSDClassifierService service;
 
     @Override
     protected void init(final ProcessorInitializationContext context) {
@@ -90,7 +90,7 @@ public class InferenceProcessor extends AbstractProcessor {
 
     @OnScheduled
     public void onScheduled(final ProcessContext context) {
-        //service = new TensorFlowService();
+        service = new SSDClassifierService();
         return;
     }
 
@@ -109,7 +109,7 @@ public class InferenceProcessor extends AbstractProcessor {
                 modelDir = context.getProperty(MODEL_DIR_NAME).evaluateAttributeExpressions(flowFile).getValue();
             }
             if (modelDir == null) {
-                modelDir = "/models";
+                modelDir = "/Volumes/TSPANN/projects/nifi-mxnetinference-processor/data/models/resnet50_ssd/resnet50_ssd_model";
             }
             final String model = modelDir;
 
@@ -120,18 +120,31 @@ public class InferenceProcessor extends AbstractProcessor {
                     @Override
                     public void process(InputStream input) throws IOException {
                         byte[] byteArray = IOUtils.toByteArray(input);
+                        System.out.println("bytearray:" + byteArray.length);
+                        System.out.println("model:"+model);
                         getLogger().debug(
                                 String.format("read %d bytes from incoming file", new Object[] { byteArray.length }));
-//                        List<InceptionResult> results = service.getInception(byteArray, model);
-//
-//                        if (results != null) {
-//                            getLogger().debug(String.format("Found %d results", new Object[] { results.size() }));
-//
-//                            for (InceptionResult inceptionResult : results) {
-//                                attributes.put(String.format("label_%d", inceptionResult.getDisplayRank()), inceptionResult.getLabel() );
-//                                attributes.put(String.format("probability_%d", inceptionResult.getDisplayRank()), inceptionResult.getProbability());
-//                            }
-//                        }
+                        List<Result> results = service.ssdClassify(model, byteArray);
+
+                        if (results != null) {
+                            getLogger().debug(String.format("Found %d results", new Object[] { results.size() }));
+
+                            int i = 1;
+                            for (Result result : results) {
+                                attributes.put(String.format("label_%d", i), result.getLabel() );
+                                attributes.put(String.format("probability_%d",i), String.format("%.2f", result.getProbability()));
+
+                                if ( result.getXmin() > 0) {
+                                    attributes.put(String.format("xmin_%d", i), String.format("%.2f", result.getXmin()));
+                                    attributes.put(String.format("xmax_%d", i), String.format("%.2f", result.getXmax()));
+                                    attributes.put(String.format("ymin_%d", i), String.format("%.2f", result.getYmin()));
+                                    attributes.put(String.format("ymax_%d", i), String.format("%.2f", result.getYmax()));
+
+                                }
+
+                                i++;
+                            }
+                        }
                     }
                 });
                 if (attributes.size() == 0) {
