@@ -3,21 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1e2e223d-dea0-427d-a42c-c5910de29136" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/nifi-mxnetinference-nar-1.0.nar" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-nar/target/nifi-mxnetinference-nar-1.0.nar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/SSDClassifierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/SSDClassifierService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/java/com/dataflowdeveloper/mxnet/InferenceProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/java/com/dataflowdeveloper/mxnet/InferenceProcessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/resources/._dog.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/resources/dog.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/resources/resnet50_ssd/._resnet50_ssd_model-0000.params" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/resources/resnet50_ssd/._resnet50_ssd_model-symbol.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/resources/resnet50_ssd/._synset.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/resources/resnet50_ssd/resnet50_ssd_model-0000.params" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/resources/resnet50_ssd/resnet50_ssd_model-symbol.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/resources/resnet50_ssd/synset.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/nifi-mxnetinference-processors-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/nifi-mxnetinference-processors-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/com/dataflowdeveloper/mxnet/InferenceProcessor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/com/dataflowdeveloper/mxnet/InferenceProcessor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/com/dataflowdeveloper/mxnet/InferenceProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/com/dataflowdeveloper/mxnet/InferenceProcessor.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,11 +22,11 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
+            <state relative-caret-position="190">
               <caret line="165" column="106" selection-start-line="165" selection-start-column="106" selection-end-line="165" selection-end-column="106" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -48,29 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/java/com/dataflowdeveloper/mxnet/InferenceProcessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state relative-caret-position="-152">
               <caret line="42" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="e#588#589#0" expanded="true" />
-                <element signature="e#669#670#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/SSDClassifierService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="147" column="51" selection-start-line="147" selection-start-column="51" selection-end-line="147" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6857#6865#0" expanded="true" />
-                <element signature="e#4283#4292#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -115,10 +84,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="2233" />
-    <option name="height" value="1350" />
+    <option name="width" value="1440" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -132,11 +101,6 @@
             <path>
               <item name="nifi-mxnetinference-processor" type="b2602c69:ProjectViewProjectNode" />
               <item name="nifi-mxnetinference-processor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nifi-mxnetinference-processor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nifi-mxnetinference-processor" type="462c0819:PsiDirectoryNode" />
-              <item name="nifi-mxnetinference-nar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nifi-mxnetinference-processor" type="b2602c69:ProjectViewProjectNode" />
@@ -206,7 +170,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544026409838" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544034418978" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -335,9 +299,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InferenceProcessorTest_testProcessor - 2018.12.05 at 09h 13m 59s.xml">
-      <configuration name="InferenceProcessorTest.testProcessor" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="InferenceProcessorTest_testProcessor - 2018.12.05 at 09h 15m 42s.xml">
       <configuration name="InferenceProcessorTest.testProcessor" configurationId="JUnit" />
     </history-entry>
@@ -365,12 +326,15 @@
     <history-entry file="InferenceProcessorTest_testProcessor - 2018.12.05 at 10h 43m 25s.xml">
       <configuration name="InferenceProcessorTest.testProcessor" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="InferenceProcessorTest_testProcessor - 2018.12.05 at 13h 26m 26s.xml">
+      <configuration name="InferenceProcessorTest.testProcessor" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="810" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24391988" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24749643" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -379,7 +343,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286908" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286908" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32729805" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -388,7 +352,6 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32729805" />
-      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.0" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -397,6 +360,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.0" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -469,36 +433,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="165" column="106" selection-start-line="165" selection-start-column="106" selection-end-line="165" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/SSDClassifierService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
+        <state relative-caret-position="402">
           <caret line="147" column="51" selection-start-line="147" selection-start-column="51" selection-end-line="147" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6857#6865#0" expanded="true" />
-            <element signature="e#4283#4292#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/java/com/dataflowdeveloper/mxnet/InferenceProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="-152">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="e#588#589#0" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="165" column="106" selection-start-line="165" selection-start-column="106" selection-end-line="165" selection-end-column="106" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
