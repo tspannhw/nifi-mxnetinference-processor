@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e2e223d-dea0-427d-a42c-c5910de29136" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/com/dataflowdeveloper/mxnet/InferenceProcessor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/com/dataflowdeveloper/mxnet/InferenceProcessor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/com/dataflowdeveloper/mxnet/InferenceProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/target/classes/com/dataflowdeveloper/mxnet/InferenceProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="165" column="106" selection-start-line="165" selection-start-column="106" selection-end-line="165" selection-end-column="106" />
+            <state relative-caret-position="252">
+              <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,10 +33,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/java/com/dataflowdeveloper/mxnet/InferenceProcessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-152">
+            <state relative-caret-position="91">
               <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
@@ -170,7 +168,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544034418978" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544035056632" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -433,16 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="165" column="106" selection-start-line="165" selection-start-column="106" selection-end-line="165" selection-end-column="106" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/SSDClassifierService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
@@ -455,8 +443,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/test/java/com/dataflowdeveloper/mxnet/InferenceProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-152">
+        <state relative-caret-position="91">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nifi-mxnetinference-processors/src/main/java/com/dataflowdeveloper/mxnet/InferenceProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

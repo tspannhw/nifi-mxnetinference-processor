@@ -162,8 +162,8 @@ public class InferenceProcessor extends AbstractProcessor {
                                 try {
                                     // Draw on the buffered image
                                     g2d.setStroke(new BasicStroke(3));
-                                    g2d.setColor(java.awt.Color.black);
-                                    g2d.drawRect(Math.round(result.getXmax()), Math.round(result.getYmax()),
+                                    g2d.setColor(Color.GREEN);
+                                    g2d.drawRect(Math.round(result.getXmin()), Math.round(result.getYmin()),
                                             Math.round(result.getWidth()),
                                             Math.round(result.getHeight()));
                                     g2d.dispose();
