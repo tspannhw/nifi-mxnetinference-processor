@@ -1,6 +1,11 @@
 target/
 /images/
 *.png
+*.jpg
+resnet50_ssd_model-symbol.json
+resnet50_ssd_model-0000.params
+synset.txt
+*resnet50_ssd*
 *.gif
 target/*
 /.settings/
