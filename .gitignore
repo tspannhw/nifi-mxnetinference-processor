@@ -1,5 +1,8 @@
 target/
 /images/
+/data/
+/data/models
+/data/images
 *.png
 *.jpg
 resnet50_ssd_model-symbol.json
