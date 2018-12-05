@@ -144,6 +144,8 @@ public class SSDClassifierService {
                             result.setXmax(i.getXMax() * height);
                             result.setYmin(i.getYMin() * width);
                             result.setYmax(i.getYMax() * height);
+                            result.setWidth(width);
+                            result.setHeight(height);
                             result.setRank(rank);
 
                             results.add(result);

@@ -153,6 +153,8 @@ public class InferenceProcessor extends AbstractProcessor {
                                     attributes.put(String.format("xmax_%d", i), String.format("%.2f", result.getXmax()));
                                     attributes.put(String.format("ymin_%d", i), String.format("%.2f", result.getYmin()));
                                     attributes.put(String.format("ymax_%d", i), String.format("%.2f", result.getYmax()));
+                                    attributes.put(String.format("height_%d", i), String.format("%d", result.getHeight()));
+                                    attributes.put(String.format("width_%d", i), String.format("%d", result.getWidth()));
                                 }
 
                                 Graphics2D g2d = (Graphics2D) img.createGraphics();
@@ -161,8 +163,9 @@ public class InferenceProcessor extends AbstractProcessor {
                                     // Draw on the buffered image
                                     g2d.setStroke(new BasicStroke(3));
                                     g2d.setColor(java.awt.Color.black);
-                                    g2d.drawRect(Math.round(result.getXmin()), Math.round(result.getYmin()),
-                                            Math.round(result.getXmax()), Math.round(result.getYmax()));
+                                    g2d.drawRect(Math.round(result.getXmax()), Math.round(result.getYmax()),
+                                            Math.round(result.getWidth()),
+                                            Math.round(result.getHeight()));
                                     g2d.dispose();
 
                                 } catch (Exception e) {

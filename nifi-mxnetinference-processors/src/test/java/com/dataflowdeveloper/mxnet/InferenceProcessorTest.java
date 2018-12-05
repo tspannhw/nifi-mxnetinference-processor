@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +18,7 @@ import org.apache.nifi.util.TestRunner;
 import org.apache.nifi.util.TestRunners;
 import org.junit.Before;
 import org.junit.Test;
+import java.nio.file.Paths;
 
 /**
  *
@@ -44,11 +46,10 @@ public class InferenceProcessorTest {
         List<MockFlowFile> successFiles = testRunner.getFlowFilesForRelationship(InferenceProcessor.REL_SUCCESS);
 
         for (MockFlowFile mockFile : successFiles) {
-//            assertEquals("giant panda", mockFile.getAttribute("label_1"));
-//            assertEquals("95.23%", mockFile.getAttribute("probability_1"));
+            assertEquals("person", mockFile.getAttribute("label_1"));
+            assertEquals("0.59", mockFile.getAttribute("probability_1"));
 
             System.out.println("Size:" +             mockFile.getSize() ) ;
-
 			Map<String, String> attributes =  mockFile.getAttributes();
 
 			 for (String attribute : attributes.keySet()) {
@@ -60,8 +61,12 @@ public class InferenceProcessorTest {
 
     @Test
     public void testProcessor() throws Exception {
-        testRunner.setProperty(InferenceProcessor.MODEL_DIR, "/Volumes/TSPANN/projects/nifi-mxnetinference-processor/data/models/resnet50_ssd/resnet50_ssd_model");
-        testRunner.enqueue(this.getClass().getClassLoader().getResourceAsStream("dog.jpg"));
+
+        java.io.File resourcesDirectory = new java.io.File("src/test/resources");
+        System.out.println(resourcesDirectory.getAbsolutePath());
+
+        testRunner.setProperty(InferenceProcessor.MODEL_DIR, resourcesDirectory.getAbsolutePath() + "/" + "resnet50_ssd_model");
+        testRunner.enqueue(this.getClass().getClassLoader().getResourceAsStream("montreal.jpg"));
 
         runAndAssertHappy();
     }
