@@ -147,25 +147,22 @@ public class InferenceProcessor extends AbstractProcessor {
                             for (Result result : results) {
                                 attributes.put(String.format("label_%d", i), result.getLabel() );
                                 attributes.put(String.format("probability_%d",i), String.format("%.2f", result.getProbability()));
-
-                                if ( result.getXmin() > 0) {
-                                    attributes.put(String.format("xmin_%d", i), String.format("%.2f", result.getXmin()));
-                                    attributes.put(String.format("xmax_%d", i), String.format("%.2f", result.getXmax()));
-                                    attributes.put(String.format("ymin_%d", i), String.format("%.2f", result.getYmin()));
-                                    attributes.put(String.format("ymax_%d", i), String.format("%.2f", result.getYmax()));
-                                    attributes.put(String.format("height_%d", i), String.format("%d", result.getHeight()));
-                                    attributes.put(String.format("width_%d", i), String.format("%d", result.getWidth()));
-                                }
+                                attributes.put(String.format("xmin_%d", i), String.format("%.2f", result.getXmin()));
+                                attributes.put(String.format("xmax_%d", i), String.format("%.2f", result.getXmax()));
+                                attributes.put(String.format("ymin_%d", i), String.format("%.2f", result.getYmin()));
+                                attributes.put(String.format("ymax_%d", i), String.format("%.2f", result.getYmax()));
+                                attributes.put(String.format("height_%d", i), String.format("%d", result.getHeight()));
+                                attributes.put(String.format("width_%d", i), String.format("%d", result.getWidth()));
 
                                 Graphics2D g2d = (Graphics2D) img.createGraphics();
 
                                 try {
-                                    // Draw on the buffered image
+                                    // Draw on the buffered image with our rectangles
                                     g2d.setStroke(new BasicStroke(3));
-                                    g2d.setColor(Color.GREEN);
-                                    g2d.drawRect(Math.round(result.getXmin()), Math.round(result.getYmin()),
-                                            Math.round(result.getWidth()),
-                                            Math.round(result.getHeight()));
+                                    g2d.setColor(Color.BLUE);
+                                    g2d.drawRect((int)(result.getXmin()), (int)(result.getYmin()),
+                                            (int)(result.getXmax()),
+                                            (int)(result.getYmax()));
                                     g2d.dispose();
 
                                 } catch (Exception e) {

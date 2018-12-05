@@ -137,13 +137,13 @@ public class SSDClassifierService {
                     for (ObjectDetectorOutput i : ele) {
                         if ( i != null ) {
                             Result result = new Result();
-
+                            
                             result.setLabel(i.getClassName());
                             result.setProbability(i.getProbability());
-                            result.setXmin(i.getXMin() * width);
-                            result.setXmax(i.getXMax() * height);
-                            result.setYmin(i.getYMin() * width);
-                            result.setYmax(i.getYMax() * height);
+                            result.setXmin(i.getXMin() * width ); //
+                            result.setXmax(i.getXMax() * width ); //
+                            result.setYmin(i.getYMin() * height ); //
+                            result.setYmax(i.getYMax() * height ); //
                             result.setWidth(width);
                             result.setHeight(height);
                             result.setRank(rank);
