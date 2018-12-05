@@ -47,6 +47,8 @@ public class InferenceProcessorTest {
 //            assertEquals("giant panda", mockFile.getAttribute("label_1"));
 //            assertEquals("95.23%", mockFile.getAttribute("probability_1"));
 
+            System.out.println("Size:" +             mockFile.getSize() ) ;
+
 			Map<String, String> attributes =  mockFile.getAttributes();
 
 			 for (String attribute : attributes.keySet()) {

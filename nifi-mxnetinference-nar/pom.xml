@@ -17,12 +17,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-  <groupId>com.dataflowdeveloper.mxnet</groupId>
-  <artifactId>inference</artifactId>
-  <version>1.0</version>
+        <groupId>com.dataflowdeveloper.mxnet</groupId>
+        <artifactId>inference</artifactId>
+        <version>1.0</version>
     </parent>
-
+    
     <artifactId>nifi-mxnetinference-nar</artifactId>
+    <version>1.0</version>
     <packaging>nar</packaging>
     <properties>
         <maven.javadoc.skip>true</maven.javadoc.skip>
@@ -32,7 +33,7 @@
     <dependencies>
         <dependency>
             <groupId>com.dataflowdeveloper.mxnet</groupId>
-	    <artifactId>nifi-mxnetinference-processors</artifactId>
+            <artifactId>nifi-mxnetinference-processors</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

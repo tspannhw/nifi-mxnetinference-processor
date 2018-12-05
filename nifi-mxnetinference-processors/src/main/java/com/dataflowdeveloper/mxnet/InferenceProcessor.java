@@ -1,5 +1,9 @@
 package com.dataflowdeveloper.mxnet;
 
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -31,15 +35,18 @@ import org.apache.nifi.processor.ProcessorInitializationContext;
 import org.apache.nifi.processor.Relationship;
 import org.apache.nifi.processor.exception.ProcessException;
 import org.apache.nifi.processor.io.InputStreamCallback;
+import org.apache.nifi.processor.io.StreamCallback;
 import org.apache.nifi.processor.util.StandardValidators;
+
+import javax.imageio.ImageIO;
 
 @EventDriven
 @SupportsBatching
 @SideEffectFree
-@Tags({ "mxnet", "inference", "computer vision", "image" })
-@CapabilityDescription("Run Apache MXNet Image Recognition")
+@Tags({ "mxnet", "inference", "computer vision", "image", "ssd", "object detection", "Apache MXNet", "deep learning" })
+@CapabilityDescription("Run Apache MXNet Object Detection / SSD")
 @SeeAlso({})
-@WritesAttributes({ @WritesAttribute(attribute = "probilities", description = "The probabilites and labels") })
+@WritesAttributes({ @WritesAttribute(attribute = "label", description = "The x, y, probabilities and labels") })
 /**
  *
  * @author tspann  Timothy Spann
@@ -47,9 +54,7 @@ import org.apache.nifi.processor.util.StandardValidators;
  */
 public class InferenceProcessor extends AbstractProcessor {
 
-    public static final String ATTRIBUTE_OUTPUT_NAME = "tf.probabilities";
     public static final String MODEL_DIR_NAME = "modeldir";
-    public static final String PROPERTY_NAME_EXTRA = "Extra Resources";
 
     public static final PropertyDescriptor MODEL_DIR = new PropertyDescriptor.Builder().name(MODEL_DIR_NAME)
             .description("Model Directory").required(true)
@@ -109,27 +114,36 @@ public class InferenceProcessor extends AbstractProcessor {
                 modelDir = context.getProperty(MODEL_DIR_NAME).evaluateAttributeExpressions(flowFile).getValue();
             }
             if (modelDir == null) {
-                modelDir = "/Volumes/TSPANN/projects/nifi-mxnetinference-processor/data/models/resnet50_ssd/resnet50_ssd_model";
+                modelDir = "data/models/resnet50_ssd/resnet50_ssd_model";
             }
             final String model = modelDir;
 
             try {
                 final HashMap<String, String> attributes = new HashMap<String, String>();
 
-                session.read(flowFile, new InputStreamCallback() {
+                flowFile = session.write(flowFile, new StreamCallback() {
                     @Override
-                    public void process(InputStream input) throws IOException {
+                    public void process(final InputStream input, final java.io.OutputStream out) throws IOException {
+
                         byte[] byteArray = IOUtils.toByteArray(input);
-                        System.out.println("bytearray:" + byteArray.length);
-                        System.out.println("model:"+model);
                         getLogger().debug(
                                 String.format("read %d bytes from incoming file", new Object[] { byteArray.length }));
+
                         List<Result> results = service.ssdClassify(model, byteArray);
 
                         if (results != null) {
                             getLogger().debug(String.format("Found %d results", new Object[] { results.size() }));
 
                             int i = 1;
+                            InputStream in = new ByteArrayInputStream(byteArray);
+                            BufferedImage img = null;
+
+                            try {
+                                img = ImageIO.read(in);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+
                             for (Result result : results) {
                                 attributes.put(String.format("label_%d", i), result.getLabel() );
                                 attributes.put(String.format("probability_%d",i), String.format("%.2f", result.getProbability()));
@@ -139,18 +153,41 @@ public class InferenceProcessor extends AbstractProcessor {
                                     attributes.put(String.format("xmax_%d", i), String.format("%.2f", result.getXmax()));
                                     attributes.put(String.format("ymin_%d", i), String.format("%.2f", result.getYmin()));
                                     attributes.put(String.format("ymax_%d", i), String.format("%.2f", result.getYmax()));
-
                                 }
+
+                                Graphics2D g2d = (Graphics2D) img.createGraphics();
+
+                                try {
+                                    // Draw on the buffered image
+                                    g2d.setStroke(new BasicStroke(3));
+                                    g2d.setColor(java.awt.Color.black);
+                                    g2d.drawRect(Math.round(result.getXmin()), Math.round(result.getYmin()),
+                                            Math.round(result.getXmax()), Math.round(result.getYmax()));
+                                    g2d.dispose();
+
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                                finally
+                                {
+                                    g2d.dispose();
+                                }
+
+
 
                                 i++;
                             }
+                            ImageIO.write(img, "jpg", out);
                         }
                     }
                 });
+                System.out.println("Attributessize:" + attributes.size());
                 if (attributes.size() == 0) {
                     session.transfer(flowFile, REL_FAILURE);
                 } else {
                     flowFile = session.putAllAttributes(flowFile, attributes);
+
+                    /// Add a new changed image with boxes
                     session.transfer(flowFile, REL_SUCCESS);
                 }
             } catch (Exception e) {
@@ -158,9 +195,7 @@ public class InferenceProcessor extends AbstractProcessor {
             }
 
             session.commit();
-        } catch (
-
-                final Throwable t) {
+        } catch (final Throwable t) {
             getLogger().error("Unable to process Apache MXNet Processor file " + t.getLocalizedMessage());
             throw new ProcessException(t);
         }

@@ -23,9 +23,39 @@ public class Result implements Serializable {
     private float xmax;
     private float ymin;
     private float ymax;
+    private int width;
+    private int height;
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
 
     public Result() {
         super();
+    }
+
+    public Result(String label, float probability, int rank, float xmin, float xmax, float ymin, float ymax, int width, int height) {
+        this.label = label;
+        this.probability = probability;
+        this.rank = rank;
+        this.xmin = xmin;
+        this.xmax = xmax;
+        this.ymin = ymin;
+        this.ymax = ymax;
+        this.width = width;
+        this.height = height;
     }
 
     /**
@@ -50,26 +80,6 @@ public class Result implements Serializable {
     }
 
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Result result = (Result) o;
-        return Float.compare(result.probability, probability) == 0 &&
-                rank == result.rank &&
-                Float.compare(result.xmin, xmin) == 0 &&
-                Float.compare(result.xmax, xmax) == 0 &&
-                Float.compare(result.ymin, ymin) == 0 &&
-                Float.compare(result.ymax, ymax) == 0 &&
-                Objects.equals(label, result.label);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(label, probability, rank, xmin, xmax, ymin, ymax);
-    }
-
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Result{");
@@ -80,6 +90,8 @@ public class Result implements Serializable {
         sb.append(", xmax=").append(xmax);
         sb.append(", ymin=").append(ymin);
         sb.append(", ymax=").append(ymax);
+        sb.append(", width=").append(width);
+        sb.append(", height=").append(height);
         sb.append('}');
         return sb.toString();
     }

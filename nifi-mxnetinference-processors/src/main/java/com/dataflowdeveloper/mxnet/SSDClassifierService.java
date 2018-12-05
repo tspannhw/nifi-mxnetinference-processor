@@ -1,22 +1,27 @@
 package com.dataflowdeveloper.mxnet;
 
-import org.apache.mxnet.infer.javaapi.ObjectDetectorOutput;
-import org.kohsuke.args4j.CmdLineParser;
-import org.kohsuke.args4j.Option;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.apache.mxnet.infer.javaapi.ObjectDetectorOutput;
 import org.apache.mxnet.javaapi.*;
 import org.apache.mxnet.infer.javaapi.ObjectDetector;
 
 import java.io.InputStream;
 import java.io.ByteArrayInputStream;
 
+import  java.awt.geom.Rectangle2D;
+import java.awt.Graphics2D;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.BasicStroke;
+
 // scalastyle:off
 import java.awt.image.BufferedImage;
 // scalastyle:on
 
+import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -42,7 +47,6 @@ import java.util.PriorityQueue;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -56,90 +60,14 @@ import javax.imageio.ImageIO;
  * https://github.com/apache/incubator-mxnet/tree/master/scala-package/examples/src/main/java/org/apache/mxnetexamples/javaapi/infer/objectdetector
  * see scala ./get_ssd_data.sh
  * https://github.com/apache/incubator-mxnet/tree/master/scala-package/examples/scripts/infer/objectdetector
- * <p>
- * Build annotated image https://www.baeldung.com/java-images
- * https://imagej.nih.gov/ij/index.html
- * <dependency>
- * <groupId>net.imagej</groupId>
- * <artifactId>ij</artifactId>
- * <version>1.51h</version>
- * </dependency>
- * <p>
- * http://openimaj.org/
- * <p>
- * https://commons.apache.org/proper/commons-imaging/
+ * </p>
  */
 public class SSDClassifierService {
-
-    /**
-     * input model directory and prefix of the model
-     **/
-    private String modelPathPrefix = "/Volumes/TSPANN/projects/nifi-mxnetinference-processor/data/models/resnet50_ssd/resnet50_ssd_model";
-    /**
-     * the input image
-     **/
-    private String inputImagePath = "/Volumes/TSPANN/projects/nifi-mxnetinference-processor/data/images/dog.jpg";
-    /**
-     * the input batch of images directory
-     **/
-    private String inputImageDir = "/Volumes/TSPANN/projects/nifi-mxnetinference-processor/data/images/";
 
     /**
      * logging
      **/
     private final static Logger logger = LoggerFactory.getLogger(SSDClassifierService.class);
-
-    private Map<Path, byte[]> modelCache = new HashMap<Path, byte[]>();
-    private Map<Path, List<String>> labelCache = new HashMap<Path, List<String>>();
-
-    /**
-     * cache labels
-     *
-     * @param path
-     * @return
-     */
-    private List<String> getOrCreateLabels(Path path) {
-        if (labelCache.containsKey(path)) {
-            return labelCache.get(path);
-        }
-        labelCache.put(path, readAllLinesOrExit(path));
-        return labelCache.get(path);
-    }
-
-    /**
-     * cache path bytes
-     *
-     * @param path
-     * @return
-     */
-    private byte[] getOrCreate(Path path) {
-        if (modelCache.containsKey(path)) {
-            return modelCache.get(path);
-        }
-        byte[] graphDef = readAllBytesOrExit(path);
-        modelCache.put(path, graphDef);
-        return modelCache.get(path);
-    }
-
-    private static byte[] readAllBytesOrExit(Path path) {
-        try {
-            return Files.readAllBytes(path);
-        } catch (IOException e) {
-            System.err.println("Failed to read [" + path + "]: " + e.getMessage());
-            System.exit(1);
-        }
-        return null;
-    }
-
-    private static List<String> readAllLinesOrExit(Path path) {
-        try {
-            return Files.readAllLines(path, Charset.forName("UTF-8"));
-        } catch (IOException e) {
-            System.err.println("Failed to read [" + path + "]: " + e.getMessage());
-            System.exit(0);
-        }
-        return null;
-    }
 
     /**
      * run object detection single
@@ -149,14 +77,12 @@ public class SSDClassifierService {
      * @param context
      * @return Object Data
      */
-    static List<List<ObjectDetectorOutput>>
+    public List<List<ObjectDetectorOutput>>
     runObjectDetectionSingle(String modelPathPrefix, byte[] imageBytes, List<Context> context) {
         Shape inputShape = new Shape(new int[]{1, 3, 512, 512});
         List<DataDesc> inputDescriptors = new ArrayList<DataDesc>();
         inputDescriptors.add(new DataDesc("data", inputShape, DType.Float32(), "NCHW"));
 
-        // image from file
-        //BufferedImage img = ObjectDetector.loadImageFromFile(inputImagePath);
         InputStream in = new ByteArrayInputStream(imageBytes);
         BufferedImage img = null;
 
@@ -174,8 +100,6 @@ public class SSDClassifierService {
         }
     }
 
-
-
     /**
      * ssd classify with MXNet
      * @param modelPath   path to models
@@ -187,7 +111,6 @@ public class SSDClassifierService {
             return new ArrayList<Result>();
         }
 
-//        SSDClassifierService inst = new SSDClassifierService();
         List<Result> results = new ArrayList<Result>();
         List<Context> context = new ArrayList<Context>();
 
