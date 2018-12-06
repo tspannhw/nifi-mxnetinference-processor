@@ -1,56 +1,25 @@
 package com.dataflowdeveloper.mxnet;
 
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import org.apache.mxnet.infer.javaapi.ObjectDetectorOutput;
-import org.apache.mxnet.javaapi.*;
 import org.apache.mxnet.infer.javaapi.ObjectDetector;
-
-import java.io.InputStream;
-import java.io.ByteArrayInputStream;
-
-import  java.awt.geom.Rectangle2D;
-import java.awt.Graphics2D;
-import java.awt.Font;
-import java.awt.FontMetrics;
-import java.awt.BasicStroke;
-
-// scalastyle:off
-import java.awt.image.BufferedImage;
-// scalastyle:on
-
-import java.nio.Buffer;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import java.io.File;
-
-import java.io.IOException;
-import java.io.PrintStream;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map.Entry;
-import java.util.PriorityQueue;
-import java.util.Set;
-import java.util.stream.Collectors;
-
+import org.apache.mxnet.infer.javaapi.ObjectDetectorOutput;
+import org.apache.mxnet.javaapi.Context;
+import org.apache.mxnet.javaapi.DType;
+import org.apache.mxnet.javaapi.DataDesc;
+import org.apache.mxnet.javaapi.Shape;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+// scalastyle:off
+// scalastyle:on
 
 /**
  * https://mxnet.incubator.apache.org/tutorials/java/ssd_inference.html
@@ -70,6 +39,7 @@ public class SSDClassifierService {
     private final static Logger logger = LoggerFactory.getLogger(SSDClassifierService.class);
 
     /**
+     * See:   https://mxnet.incubator.apache.org/tutorials/java/ssd_inference.html
      * run object detection single
      * String inputImagePath
      * @param modelPathPrefix
@@ -93,7 +63,7 @@ public class SSDClassifierService {
         }
         if ( img != null ) {
             ObjectDetector objDet = new ObjectDetector(modelPathPrefix, inputDescriptors, context, 0);
-            return objDet.imageObjectDetect(img, 3);
+            return objDet.imageObjectDetect(img, 5);
         }
         else {
             return null;
@@ -122,6 +92,7 @@ public class SSDClassifierService {
         }
 
         try {
+            // TODO:  make shape an input attribute
             Shape inputShape = new Shape(new int[]{1, 3, 512, 512});
             Shape outputShape = new Shape(new int[]{1, 6132, 6});
 
@@ -137,7 +108,7 @@ public class SSDClassifierService {
                     for (ObjectDetectorOutput i : ele) {
                         if ( i != null ) {
                             Result result = new Result();
-                            
+
                             result.setLabel(i.getClassName());
                             result.setProbability(i.getProbability());
                             result.setXmin(i.getXMin() * width ); //

@@ -1,6 +1,7 @@
 package com.dataflowdeveloper.mxnet;
 
 import java.awt.*;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -156,13 +157,39 @@ public class InferenceProcessor extends AbstractProcessor {
 
                                 Graphics2D g2d = (Graphics2D) img.createGraphics();
 
+                                float x, y, x0, y0 = 0.0f;
+                                float width, height = 0.0f;
+
                                 try {
                                     // Draw on the buffered image with our rectangles
-                                    g2d.setStroke(new BasicStroke(3));
-                                    g2d.setColor(Color.BLUE);
-                                    g2d.drawRect((int)(result.getXmin()), (int)(result.getYmin()),
-                                            (int)(result.getXmax()),
-                                            (int)(result.getYmax()));
+                                    g2d.setStroke(new BasicStroke(2));
+
+                                    switch (i)
+                                    {
+                                        case(1):  g2d.setColor(Color.BLUE); break;
+                                        case(2):  g2d.setColor(Color.GREEN); break;
+                                        case(3):  g2d.setColor(Color.CYAN); break;
+                                        case(4):  g2d.setColor(Color.RED); break;
+                                        case(5):  g2d.setColor(Color.YELLOW); break;
+                                        default:  g2d.setColor(Color.BLACK); break;
+                                    }
+
+                                    x = Math.min( result.getXmax(), result.getXmin());
+                                    y = Math.min( result.getYmax(), result.getYmin());
+                                    y0 = Math.max( result.getYmax(), result.getYmin());
+                                    x0 = Math.max( result.getXmax(), result.getXmin());
+
+                                    width = Math.abs(  x - x0 );
+                                    height = Math.abs( y -  y0 );
+
+                                    g2d.draw(new Rectangle2D.Double(x, y, width, height));
+
+//                                    System.out.println("X y w h:" + x + "," +y +","+ width +","+ height);
+//                                    System.out.println("X + width:" + (x+width));
+//                                    System.out.println("Y + Height:" + (y + height));
+                                    // In rectangles, the X and Y coordinates represent the top left corner.
+                                    // xmin, ymax
+
                                     g2d.dispose();
 
                                 } catch (Exception e) {
@@ -172,8 +199,6 @@ public class InferenceProcessor extends AbstractProcessor {
                                 {
                                     g2d.dispose();
                                 }
-
-
 
                                 i++;
                             }
