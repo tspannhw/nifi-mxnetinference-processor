@@ -118,7 +118,7 @@ public class SSDClassifierService {
                             result.setWidth(width);
                             result.setHeight(height);
                             result.setRank(rank);
-
+                            
                             results.add(result);
                             rank++;
                         }
